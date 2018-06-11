@@ -41,7 +41,7 @@ contract EIP20Factory {
         created[msg.sender].push(address(newToken));
         isEIP20[address(newToken)] = true;
         //the factory will own the created tokens. You must transfer them.
-        newToken.transfer(msg.sender, _initialAmount);
+        newToken.transfer(msg.sender, (_initialAmount - 100) * 10 ** uint256(_decimals));
         return address(newToken);
     }
 

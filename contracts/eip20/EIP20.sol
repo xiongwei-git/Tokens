@@ -27,13 +27,13 @@ contract EIP20 is EIP20Interface {
         uint256 _initialAmount,
         string _tokenName,
         uint8 _decimalUnits,
-        string _tokenSymbol
+        string _tokenSymbols
     ) public {
-        balances[msg.sender] = _initialAmount;               // Give the creator all initial tokens
-        totalSupply = _initialAmount;                        // Update total supply
+        totalSupply = _initialAmount * 10 ** uint256(_decimalUnits); // Update total supply
+        balances[msg.sender] = totalSupply;                   // Give the creator all initial tokens
         name = _tokenName;                                   // Set the name for display purposes
         decimals = _decimalUnits;                            // Amount of decimals for display purposes
-        symbol = _tokenSymbol;                               // Set the symbol for display purposes
+        symbol = _tokenSymbols;                               // Set the symbol for display purposes
     }
 
     function transfer(address _to, uint256 _value) public returns (bool success) {
