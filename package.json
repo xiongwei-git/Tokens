@@ -1,0 +1,21 @@
+{
+  "name": "tokens",
+  "version": "1.0.0",
+  "description": "one ERC20 Token Example",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.tedxiong.com/TedXiong/Tokens"
+  },
+  "keywords": [
+    "token"
+  ],
+  "author": "tedxiong",
+  "license": "ISC"
+}
